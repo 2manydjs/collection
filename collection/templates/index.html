@@ -1,0 +1,10 @@
+{% extends 'layouts/base.html' %}
+{% load humanize %}
+{% block title %}"Homepage" fanatstisch! - {{ block.super  }} {% endblock %}
+{% block content %}
+  {% for privatelabel in privatelabels %}
+    <h2><a href="{% url 'privatelabel_detail' slug=privatelabel.slug %}">{{ privatelabel.name }}</a></h2>
+     <p>{{ privatelabel.description }}</p>
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'layouts/base.html' %}
+{% block title %}  {{ privatelabel.name }} - {{ block.super  }} {% endblock %}
+{% block content %}
+   <h1>{{ privatelabel.name }}</h1>
+   <p>{{ privatelabel.description }}</p>
+   <a href="{% url 'edit_privatelabel' slug=privatelabel.slug %}">Edit page</a>
+ {% endblock %}
